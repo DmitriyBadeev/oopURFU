@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConsoleApp1;
 
-namespace ConsoleApp1
+namespace OOP
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var hashset = new HashSet<long>(); 
+            var answer1 = OOP1.SolveTask1();
+            Console.WriteLine(answer1);
 
-            for (var i = 2; i <= 100; i++)
-                for (var j = 2; j <= 100; j++)
-                {
-                    var number = (long)Math.Pow(i, j);
-                    hashset.Add(number);
-                }
+            var answer2 = OOP2.SolveTask2();
+            Console.WriteLine(answer2);
 
-            var en = hashset.OrderBy(x => x);
+            var answer3 = OOP3.SolveTask3();
+            Console.WriteLine(answer3);
 
-            foreach(var el in en)
-                Console.Write(el + " ");
+            var answer4 = OOP4.SolveTask4();
+            Console.WriteLine(answer4);
+
+            var answer5 = OOP5.SolveTask5();
+            Console.WriteLine(answer5);
         }
     }
 }
